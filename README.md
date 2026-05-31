@@ -22,13 +22,7 @@
 
 ## Визуал
 
-
-
-
-
-
-
-
+https://github.com/user-attachments/assets/cc01990f-e127-4c28-9b1f-dc9dd1930b60
 
 ## Технологии
 
