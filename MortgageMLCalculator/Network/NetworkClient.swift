@@ -6,33 +6,18 @@
 //
 
 import Foundation
-import RxSwift
 
 final class NetworkClient {
     
-    func fetchMockProperties() -> Observable<CianOffersResponse> {
-        
-        return Observable.create { observer in
-            
-            guard let url = Bundle.main.url(
-                forResource: "moscow_properties",
-                withExtension: "json"
-            ) else {
-                observer.onError(NSError(domain: "FileNotFound", code: -1))
-                return Disposables.create()
-            }
-            
-            do {
-                let data = try Data(contentsOf: url)
-                let decoded = try JSONDecoder().decode(CianOffersResponse.self, from: data)
-                
-                observer.onNext(decoded)
-                observer.onCompleted()
-            } catch {
-                observer.onError(error)
-            }
-            
-            return Disposables.create()
+    func fetchMockProperties() throws -> CianOffersResponse {
+        guard let url = Bundle.main.url(
+            forResource: "moscow_properties",
+            withExtension: "json"
+        ) else {
+            throw NSError(domain: "FileNotFound", code: -1)
         }
+
+        let data = try Data(contentsOf: url)
+        return try JSONDecoder().decode(CianOffersResponse.self, from: data)
     }
 }

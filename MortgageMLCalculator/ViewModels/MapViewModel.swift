@@ -5,21 +5,28 @@
 //  Created by Alexandra Lazareva on 25.02.2026.
 //
 
-import RxSwift
-import RxCocoa
+import Combine
+import Foundation
 
-final class MapViewModel {
+@MainActor
+final class MapViewModel: ObservableObject {
 
-    private let repository = PropertyRepository()
-    private let disposeBag = DisposeBag()
+    @Published private(set) var properties: [PropertyObject] = []
+    @Published private(set) var errorMessage: String?
 
-    let properties = BehaviorRelay<[PropertyObject]>(value: [])
+    private let repository: PropertyRepository
+
+    init(repository: PropertyRepository? = nil) {
+        self.repository = repository ?? PropertyRepository()
+    }
 
     func load() {
-        repository.loadProperties()
-            .subscribe(onNext: { [weak self] properties in
-                self?.properties.accept(properties)
-            })
-            .disposed(by: disposeBag)
+        do {
+            properties = try repository.loadProperties()
+            errorMessage = nil
+        } catch {
+            properties = []
+            errorMessage = "Не удалось загрузить объекты: \(error.localizedDescription)"
+        }
     }
 }

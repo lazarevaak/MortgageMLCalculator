@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PropertyData {
+struct PropertyData: Codable {
     
     let area: Double
     let rooms: Double
@@ -16,6 +16,24 @@ struct PropertyData {
     let distance: Double
     let floor: Double
     let year: Double
+
+    init(
+        area: Double,
+        rooms: Double,
+        bathrooms: Double,
+        garage: Double,
+        distance: Double,
+        floor: Double,
+        year: Double
+    ) {
+        self.area = area
+        self.rooms = rooms
+        self.bathrooms = bathrooms
+        self.garage = garage
+        self.distance = distance
+        self.floor = floor
+        self.year = year
+    }
     
     init?(
         area: String,
@@ -36,12 +54,26 @@ struct PropertyData {
             let year = Double(year)
         else { return nil }
         
-        self.area = area
-        self.rooms = rooms
-        self.bathrooms = bathrooms
-        self.garage = garage
-        self.distance = distance
-        self.floor = floor
-        self.year = year
+        self.init(
+            area: area,
+            rooms: rooms,
+            bathrooms: bathrooms,
+            garage: garage,
+            distance: distance,
+            floor: floor,
+            year: year
+        )
+    }
+
+    init(property: PropertyObject) {
+        self.init(
+            area: property.area,
+            rooms: Double(property.rooms),
+            bathrooms: Double(property.bathrooms),
+            garage: Double(property.garage),
+            distance: property.distance,
+            floor: Double(property.floor),
+            year: Double(property.buildYear)
+        )
     }
 }

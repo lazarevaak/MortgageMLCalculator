@@ -15,6 +15,9 @@ final class PropertyObject: Object {
     @Persisted var rooms: Double
     @Persisted var floor: Double
     @Persisted var buildYear: Double
+    @Persisted var bathrooms: Double
+    @Persisted var garage: Double
+    @Persisted var distance: Double
     @Persisted var address: String
     @Persisted var district: String
     @Persisted var metro: String

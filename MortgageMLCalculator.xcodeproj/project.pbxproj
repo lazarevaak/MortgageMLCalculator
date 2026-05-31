@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A858DB002F4F652100017068 /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = A858DAFF2F4F652100017068 /* RxFlow */; };
-		A858DB032F4F65BC00017068 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A858DB022F4F65BC00017068 /* RxCocoa */; };
-		A858DB052F4F65BC00017068 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A858DB042F4F65BC00017068 /* RxRelay */; };
-		A858DB892F4F751C00017068 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A858DB882F4F751C00017068 /* SnapKit */; };
 		A858DB8C2F4F763F00017068 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A858DB8B2F4F763F00017068 /* RealmSwift */; };
 		A87511532F5249F6000FB340 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A858DB8B2F4F763F00017068 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -79,10 +75,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A858DB8C2F4F763F00017068 /* RealmSwift in Frameworks */,
-				A858DB052F4F65BC00017068 /* RxRelay in Frameworks */,
-				A858DB002F4F652100017068 /* RxFlow in Frameworks */,
-				A858DB032F4F65BC00017068 /* RxCocoa in Frameworks */,
-				A858DB892F4F751C00017068 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,10 +134,6 @@
 			);
 			name = MortgageMLCalculator;
 			packageProductDependencies = (
-				A858DAFF2F4F652100017068 /* RxFlow */,
-				A858DB022F4F65BC00017068 /* RxCocoa */,
-				A858DB042F4F65BC00017068 /* RxRelay */,
-				A858DB882F4F751C00017068 /* SnapKit */,
 				A858DB8B2F4F763F00017068 /* RealmSwift */,
 			);
 			productName = MortgageMLCalculator;
@@ -200,7 +188,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2620;
-				LastUpgradeCheck = 2620;
+				LastUpgradeCheck = 2650;
 				TargetAttributes = {
 					A87C11A82F4DD50500B7B35A = {
 						CreatedOnToolsVersion = 26.2;
@@ -225,9 +213,6 @@
 			mainGroup = A87C11A02F4DD50500B7B35A;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				A858DAFE2F4F652100017068 /* XCRemoteSwiftPackageReference "RxFlow" */,
-				A858DB012F4F65BC00017068 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				A858DB082F4F66D500017068 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				A858DB8A2F4F763F00017068 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -311,7 +296,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 987W38BN4H;
+				DEVELOPMENT_TEAM = JW4W97J58G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MortgageMLCalculator/App/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Нужно для отображения квартир рядом с вами";
@@ -344,7 +329,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 987W38BN4H;
+				DEVELOPMENT_TEAM = JW4W97J58G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MortgageMLCalculator/App/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Нужно для отображения квартир рядом с вами";
@@ -429,6 +414,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -486,6 +472,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -617,30 +604,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A858DAFE2F4F652100017068 /* XCRemoteSwiftPackageReference "RxFlow" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RxSwiftCommunity/RxFlow";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.13.2;
-			};
-		};
-		A858DB012F4F65BC00017068 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.10.1;
-			};
-		};
-		A858DB082F4F66D500017068 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.1;
-			};
-		};
 		A858DB8A2F4F763F00017068 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
@@ -652,26 +615,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A858DAFF2F4F652100017068 /* RxFlow */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A858DAFE2F4F652100017068 /* XCRemoteSwiftPackageReference "RxFlow" */;
-			productName = RxFlow;
-		};
-		A858DB022F4F65BC00017068 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A858DB012F4F65BC00017068 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		A858DB042F4F65BC00017068 /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A858DB012F4F65BC00017068 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		A858DB882F4F751C00017068 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A858DB082F4F66D500017068 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
 		A858DB8B2F4F763F00017068 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A858DB8A2F4F763F00017068 /* XCRemoteSwiftPackageReference "realm-swift" */;

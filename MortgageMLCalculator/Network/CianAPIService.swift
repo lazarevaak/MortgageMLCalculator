@@ -5,7 +5,7 @@
 //  Created by Alexandra Lazareva on 25.02.2026.
 //
 
-import RxSwift
+import Foundation
 
 final class CianAPIService {
     
@@ -15,9 +15,7 @@ final class CianAPIService {
         self.client = client
     }
     
-    func loadOffers() -> Observable<[CianOffer]> {
-        return client
-            .fetchMockProperties()
-            .map { $0.offers }
+    func loadOffers() throws -> [CianOffer] {
+        try client.fetchMockProperties().offers
     }
 }

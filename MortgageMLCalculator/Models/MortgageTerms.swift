@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MortgageTerms {
+struct MortgageTerms: Codable {
     let downPayment: Double
     let loanTerm: Double
     let interestRate: Double

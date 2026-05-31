@@ -23,4 +23,7 @@ struct CianOffer: Decodable {
     let metro: String
     let latitude: Double
     let longitude: Double
+    let bathrooms: Double
+    let garage: Double
+    let distance: Double
 }
